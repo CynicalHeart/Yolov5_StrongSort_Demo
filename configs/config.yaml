@@ -1,0 +1,38 @@
+# MOT
+MOT:
+  MAX_DIST: 0.3  # cosine metric threshold
+  MAX_IOU_DISTANCE: 0.7  # motion info IOU
+  MAX_DIOU_DISTANCE: 0.5  # motion info D-IOU
+  MAX_AGE: 70  # change state to Loss & match depth
+  BUDGET: 100  # feature bank 
+  N_INIT: 3  # init threshold [t -> c]
+
+# Det-YOLO
+DET:
+  YOLO: 'E:/MySpace/resource/hub/yolov5'
+  WEIGHT: 'E:/MySpace/resource/hub/weights/crowdhuman_yolov5m.pt'
+  IMG_SIZE: 640
+  CONF_THRES: 0.6
+  IOU_THRES: 0.5
+  SOURCE: 'others/inputs'  # video dir
+  SHOW_VID: True
+  SAVE_VID: True
+  SAVE_TEXT: True
+  HALF: False
+  MIN_HEIGHT: 0
+  CLASSES: [ 0 ]  # person
+
+
+# ReID
+REID:
+  NAME: 'resnet34_ibn_a'
+  LAST_STRIDE: 1
+  PRETRAIN: False
+  PRETRAIN_PATH: 'E:/MySpace/resource/hub/weights/resnet_34_ibn.pth'
+  NECK: 'bnneck'
+  NECK_FEAT: 'after'
+  NUM_CLASS: 751  # classes
+
+# Result
+RES:
+  OUTPUT: 'others/results'

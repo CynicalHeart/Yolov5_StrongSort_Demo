@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Strong Sort",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--NSA",
+                "--EMA",
+                "--MC",
+                "--woC"
+            ]
+        }
+    ]
+}
